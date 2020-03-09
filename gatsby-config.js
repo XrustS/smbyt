@@ -1,3 +1,7 @@
+const autoprefixer = require("autoprefixer")
+const precss = require("precss")
+const cssnano = require("cssnano")
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -30,6 +34,11 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-postcss`,
+
+    // PostCSS plugins
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: { postCssPlugins: [autoprefixer(), precss(), cssnano()] },
+    },
   ],
 }
