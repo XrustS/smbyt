@@ -1,6 +1,7 @@
 const autoprefixer = require("autoprefixer")
 const precss = require("precss")
 const cssnano = require("cssnano")
+const nested = require("postcss-nested")
 
 module.exports = {
   siteMetadata: {
@@ -28,7 +29,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -38,7 +39,9 @@ module.exports = {
     // PostCSS plugins
     {
       resolve: `gatsby-plugin-postcss`,
-      options: { postCssPlugins: [autoprefixer(), precss(), cssnano()] },
+      options: {
+        postCssPlugins: [nested, precss, autoprefixer({}), cssnano],
+      },
     },
   ],
 }
