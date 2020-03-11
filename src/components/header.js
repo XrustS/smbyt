@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => {
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 125, height: 125) {
+          fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
           }
         }
