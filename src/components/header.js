@@ -1,6 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
+import SEO from "./seo"
 
 const Header = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
@@ -17,6 +18,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
+      <SEO />
       <div className="container">
         <div className="logo">
           <div className="flex center">

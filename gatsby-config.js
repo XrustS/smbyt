@@ -37,11 +37,13 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 
+    // Sass plugin
+    `gatsby-plugin-sass`,
     // PostCSS plugins
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [nested, precss, autoprefixer({}), cssnano],
+        postCssPlugins: [autoprefixer({}), cssnano],
       },
     },
   ],

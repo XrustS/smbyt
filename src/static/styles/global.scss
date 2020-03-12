@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Acrom";
+  src: url("../fonts/acrom.ttf");
+}
+
+@font-face {
+  font-family: "Acrom regular";
+  src: url("../fonts/acrom_regular.ttf");
+}
+
+body {
+  font-family: Acrom, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+}
