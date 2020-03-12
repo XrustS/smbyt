@@ -1,34 +1,18 @@
-import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import Img from "gatsby-image"
-import SEO from "./seo"
+import { Container } from "./atoms/Container"
+import { Col, Row } from "./atoms/Grid"
+import { Logo } from "./atoms/Logo"
 
 const Header = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <header>
-      <SEO />
-      <div className="container">
-        <div className="logo">
-          <div className="flex center">
-            <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-            <span className="logo__main"> Строй</span>{" "}
-            <span className="logo__second">Модуль</span>{" "}
-            <span className="logo__gray">Быт </span>
-          </div>
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <Logo />
+          </Col>
+        </Row>
+      </Container>
     </header>
   )
 }

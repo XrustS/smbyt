@@ -1,7 +1,5 @@
 const autoprefixer = require("autoprefixer")
-const precss = require("precss")
 const cssnano = require("cssnano")
-const nested = require("postcss-nested")
 const STATIC_PATH = require("./constants").STATIC_PATH
 
 module.exports = {

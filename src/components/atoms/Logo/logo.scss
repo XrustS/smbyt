@@ -1,0 +1,15 @@
+.logo {
+  font-size: 0.8rem;
+  & span {
+    margin-left: 5px;
+  }
+  &__first {
+    color: #222;
+  }
+  &__second {
+    color: red;
+  }
+  &__three {
+    color: brown;
+  }
+}
